@@ -7,12 +7,12 @@
 </head>
 <body>
     <h1>Trivia Question Generator</h1>
-    <button id="generate-button">Generate Questions</button>
+    <button id="question">Generate Questions</button>
     <div id="questions-container"></div>
 
     <script>
 
-        const _question = document.getElementById('generate-button');
+        const _question = document.getElementById('question');
         const _options = document.querySelectorAll('questions-container');
 
 
@@ -35,6 +35,8 @@
             _optionsList.splice(math.floor(math.random() * (incorrectAnswer.lenght + 1)), 0, correctAnswer);
             console.log(_optionsList);
             console.log(correctAnswer);
+
+            _question.innerHTML = `${data.question} <br> <span class="category">${data.category} </span>;
         }
 
        loadQuestion();
