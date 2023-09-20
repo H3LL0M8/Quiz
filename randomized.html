@@ -9,8 +9,10 @@
     <h1><a href="KwizNest.html">KwizNest</a></h1>
    
     <div class="center">
-   <input type="text" id="topic" placeholder="Enter a topic">
-  <button type="submit" id="generate">Generate Questions</button>
+   <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="document">
+    <input type="submit" value="Upload">
+  </form>
   <div id="questions">
     <h2 class="center">Questions</h2>
   </div>
